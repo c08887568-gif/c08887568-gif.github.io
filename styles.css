@@ -32,7 +32,7 @@ body {
 
 .profile {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 120px;
+  grid-template-columns: minmax(0, 1fr) 105px;
   gap: 40px;
   align-items: start;
   margin-bottom: 38px;
@@ -47,8 +47,8 @@ h2 { font-size: 25px; letter-spacing: -.025em; }
 
 .portrait {
   display: block;
-  width: 120px;
-  height: 160px;
+  width: 105px;
+  height: 140px;
   object-fit: cover;
 }
 
@@ -56,8 +56,8 @@ h2 { font-size: 25px; letter-spacing: -.025em; }
 
 @media (max-width: 700px) {
   .page { width: 100%; min-height: 100vh; margin: 0; padding: 30px 24px 48px; box-shadow: none; }
-  .profile { grid-template-columns: 1fr 92px; gap: 18px; }
-  .portrait { width: 92px; height: auto; }
+  .profile { grid-template-columns: 1fr 80px; gap: 18px; }
+  .portrait { width: 80px; height: auto; }
   h1 { font-size: 27px; }
   h2 { font-size: 23px; }
   .profile-about { margin-top: 32px; }
@@ -66,5 +66,5 @@ h2 { font-size: 25px; letter-spacing: -.025em; }
 
 @media (max-width: 460px) {
   .profile { grid-template-columns: 1fr; }
-  .portrait { grid-row: 1; width: 92px; }
+  .portrait { grid-row: 1; width: 80px; }
 }
