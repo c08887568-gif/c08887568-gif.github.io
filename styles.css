@@ -1,0 +1,76 @@
+:root {
+  color-scheme: light;
+  --ink: #233140;
+  --blue: #075da6;
+  --paper: #fff;
+  --background: #e8e8e6;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: Lato, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+  line-height: 1.45;
+  background-color: var(--background);
+  background-image:
+    repeating-linear-gradient(0deg, #ffffff22 0 1px, transparent 1px 4px),
+    repeating-linear-gradient(90deg, #ffffff33 0 1px, transparent 1px 5px);
+}
+
+.page {
+  width: min(980px, calc(100% - 42px));
+  min-height: 100vh;
+  margin: 20px auto;
+  padding: 48px 50px 66px;
+  background: var(--paper);
+  box-shadow: 0 0 18px #00000020;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 135px;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 26px;
+}
+
+h1, h2 { margin: 0; font-weight: 700; line-height: 1.25; }
+h1 { font-size: 32px; letter-spacing: -.035em; }
+h1 span { font-family: "Ma Shan Zheng", "STKaiti", "KaiTi", cursive; letter-spacing: 0; }
+h2 { font-size: 25px; letter-spacing: -.025em; }
+
+.profile-subtitle { min-height: 27px; margin-top: 8px; }
+.profile-links { min-height: 30px; }
+.profile-about { margin-top: 5px; }
+.profile-about .empty-content { min-height: 170px; }
+
+.portrait {
+  display: block;
+  width: 135px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.section { margin-top: 30px; }
+.section .empty-content { min-height: 74px; }
+.section-last .empty-content { min-height: 24px; }
+
+@media (max-width: 700px) {
+  .page { width: 100%; margin: 0; padding: 30px 24px 48px; box-shadow: none; }
+  .profile { grid-template-columns: 1fr 104px; gap: 18px; }
+  .portrait { width: 104px; height: auto; }
+  h1 { font-size: 27px; }
+  h2 { font-size: 23px; }
+  .profile-about .empty-content { min-height: 95px; }
+}
+
+@media (max-width: 460px) {
+  .profile { grid-template-columns: 1fr; }
+  .portrait { grid-row: 1; width: 104px; }
+  .profile-subtitle, .profile-links { min-height: 16px; }
+}
